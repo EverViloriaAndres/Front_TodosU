@@ -1,0 +1,208 @@
+/************************Stilos parallax*/
+.fondo-naranja,
+.fondo-logo {
+  width: 100%;
+  height: clamp(70vh, 100vh, 100vh);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 1.2s linear;
+}
+/*Fondo naranja es absoluta, para que pierda el espacio reservado*/
+/*Asi, el fondo logo queda detras, y como son del mismo tamaño, queda una detras del otro*/
+/*Desde js, al fondo logo, se le da posicion relativa,*/
+/*Para que regrese al frente, y se le da un hancho segun se haga scroll*/
+.fondo-naranja {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nombreh1 {
+  width: auto;
+  position: absolute;
+  top: 90%;
+  left: 3%;
+  font-size: clamp(5px, 15px, 30px);
+  font-family: serif;
+}
+/****************************/
+
+/***********Foto larga*/
+.foto-larga {
+  width: 100%;
+  height: 40vh;
+  background-image: url(../img/fontoFixed.png);
+  background-size: cover;
+
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+}
+.motivacion {
+  width: auto;
+
+  font-style: italic;
+  font-family: "InstrumentSerif-Italic";
+  font-size: clamp(30px, 5vw, 50px);
+  font-weight: 600;
+
+  mix-blend-mode: multiply;
+  color: #40128b;
+}
+/******************************/
+
+/*CSS galeria dentro de cursos_section */
+
+.para-galeria {
+  /*Se crea esta sub-section para poder hacer que la galeria no quede de 1columna*/
+  /*Debido a que la section padre, es display gris y place-item:center*/
+
+  min-width: 100%;
+
+  padding: 3px;
+  margin: 1.4% auto;
+
+  border-radius: 17px;
+}
+
+.galeria {
+  display: grid;
+  gap: 0.2604166666666667vw;
+  grid-auto-flow: dense;
+  grid-auto-rows: 19.833333333333332vw;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+}
+
+.targ {
+  border-radius: 0.8vw;
+  background-position: center;
+  background-size: cover;
+}
+
+.targ:hover {
+  transform: scale(0.9);
+}
+
+#targ-1 {
+  background-image: url(../img/andrea-piano.png);
+}
+#targ-2 {
+  background-image: url(../img/clase_guitarra.jpg);
+}
+#targ-3 {
+  background-image: url(../img/clase_sarxo.jpg);
+}
+#targ-4 {
+  background-image: url(../img/clase_arpa.jpg);
+}
+#targ-5 {
+  background-image: url(../img/clase_bongos.jpg);
+}
+#targ-6 {
+  background-image: url(../img/clase_violin.jpg);
+}
+/******************************/
+
+/**********Estilos formularios*/
+
+.contacto {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fafafae4;
+
+  padding-top: 1.04vw;
+}
+
+.para-form {
+  width: clamp(40%, 60%, 80%);
+  padding-top: 1.6vw;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.interes {
+  width: auto;
+  display: inline-block;
+  background-color: #f2edf7;
+  padding: 0.26vw;
+
+  color: #40128b;
+  outline: solid 2px #d1a410;
+  border-radius: 0.313rem;
+  position: absolute;
+  top: 4%;
+  font-size: clamp(25px, 1.86vw, 35px);
+}
+
+.form {
+  width: 100%;
+  margin-top: 2rem;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 0.83vw;
+  margin-bottom: 1.56vw;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+
+  border-radius: 0.5vw;
+}
+label,
+input {
+  display: inline-block;
+  width: clamp(60%, 80%, 90%);
+}
+#elLabel {
+  margin-top: 10px;
+}
+input {
+  text-align: start;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: clamp(15px, 1vw, 20px);
+  font-style: italic;
+  text-overflow: ellipsis;
+  color: #1c0134;
+}
+
+.for-nom {
+  font-size: clamp(20px, 1.56vw, 30px);
+  width: 100%;
+}
+
+.map {
+  width: clamp(60%, 70%, 80%);
+
+  background: center;
+  margin: 1.041vw 0px;
+
+  border-radius: 0.41vw;
+}
+iframe {
+  width: 100%;
+
+  border-radius: 0.5rem;
+  outline: solid #eac8a5 0.05px;
+}
+
+@media (min-height: 100vw) {
+  .fondo-naranja,
+  .fondo-logo {
+    height: 50vh;
+  }
+  .nombreh1 {
+    top: 40%;
+    left: 3%;
+  }
+}

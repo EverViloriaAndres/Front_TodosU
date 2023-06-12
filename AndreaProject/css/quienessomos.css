@@ -1,0 +1,96 @@
+/*Estilos slider o carrusel*/
+
+.slider {
+  width: clamp(60%, 80%, 90%);
+  height: clamp(30.6vh, 49.08vh, 55.21vh);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  position: relative;
+}
+
+input[type="radio"] {
+  display: none;
+  position: absolute;
+}
+
+.sub-slider {
+  width: 100%;
+
+  height: inherit;
+
+  transform-style: preserve-3d;
+
+  padding: 5px;
+}
+
+.cards {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  padding: 30px;
+}
+
+.card {
+  position: absolute;
+  width: clamp(40%, 60%, 60%);
+  padding: 3px;
+  left: 0;
+  right: 0;
+  height: inherit;
+  margin: auto;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+img {
+  padding: 2px;
+  width: 100%;
+  height: inherit;
+  border-radius: 10px;
+
+  object-fit: cover;
+}
+
+#input-2:checked ~ .cards #label-1,
+#input-1:checked ~ .cards #label-3,
+#input-3:checked ~ .cards #label-2 {
+  transform: translateX(-40%) scale(0.6);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+#input-3:checked ~ .cards #label-1,
+#input-1:checked ~ .cards #label-2,
+#input-2:checked ~ .cards #label-3 {
+  transform: translateX(40%) scale(0.6);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+#input-1:checked ~ .cards #label-1,
+#input-2:checked ~ .cards #label-2,
+#input-3:checked ~ .cards #label-3 {
+  transform: translateX(0) scale(0.8);
+  z-index: 1;
+}
+
+@media (max-width: 446px) {
+  /* .sub-slider{
+  width: 100%;
+  
+  height: clamp(50%,60%,100%);
+  
+  transform-style: preserve-3d;
+  
+  outline:  solid 2px rgb(233, 2, 254);
+  padding: 5px;
+  }*/
+}
+
+/*******************/

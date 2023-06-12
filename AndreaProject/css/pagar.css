@@ -1,0 +1,38 @@
+.container {
+  width: clamp(250px, 25vw, 25vw);
+  height: clamp(400px, 50vh, 50vh);
+  margin: 50px auto 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  outline: 1px solid #ff620a;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: blink 2s infinite;
+
+  padding: 20px;
+}
+
+.title {
+  font-size: clamp(1.25rem, 3vw, 2.188rem);
+  color: green;
+}
+
+.message {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #333;
+}
+
+@keyframes blink {
+  0% {
+    outline-color: #ff620a;
+  }
+  50% {
+    outline-color: transparent;
+  }
+  100% {
+    outline-color: #ff620a;
+  }
+}

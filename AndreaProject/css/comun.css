@@ -1,0 +1,176 @@
+/*Document*/
+* {
+  box-sizing: border-box;
+  text-align: center;
+  transition: 0.5s linear;
+  margin: 0;
+}
+
+body {
+  font-family: "Times New Roman", Times, sans-serif, cursive;
+  display: grid;
+  place-items: center;
+}
+
+/**********Nav*/
+nav {
+  width: 100%;
+  height: clamp(50px, 8vw, 100px); /*Necsario por diseño*/
+  background-color: #40128b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(
+    15px,
+    2vw,
+    30px
+  ); /*Cambiar por funcion clamp, para mejorar responsive*/
+  padding: 0.7vw;
+
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+nav ul {
+  display: flex;
+  gap: 0.8333333333333334vw;
+
+  padding: 4px;
+}
+nav ul li {
+  list-style: none;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5208333333333334vw;
+  font-family: cursive;
+  border-radius: 6px;
+}
+
+@media (hover: hover) {
+  nav ul li:hover {
+    background-color: #ffc845;
+
+    transform: translateY(-0.5208333333333334vw);
+  }
+  nav a:hover {
+    color: #40128b;
+  }
+}
+/***************************/
+
+/*Secciones centradas*/
+.quienes_somos_section,
+.cursos_section {
+  margin: 30px auto;
+  position: relative;
+  width: auto;
+  display: grid;
+  place-items: center;
+  overflow: auto;
+  padding: 1rem;
+}
+hr {
+  margin: 15px auto;
+  min-width: 80%;
+  max-width: 90%;
+  color: #d1a410;
+}
+.titulo_sobre-nosotros,
+.titulo_ofrecemos {
+  position: relative;
+  top: -92%;
+  width: auto;
+  display: inline-block;
+  background-color: #f2edf7;
+  outline: solid 2px #d1a410;
+  padding: 0.2604166666666667vw;
+  font-size: clamp(1.25rem, 1.5625vw, 2.188rem);
+  color: #40128b;
+  border-radius: 0.2rem;
+}
+
+.debajo_titulo {
+  min-width: 70%;
+  max-width: 85%;
+  /*Se requiere centrado el div, con estas medidas, por eso no se usa width: auto*/
+  /*Entonces, para el responsive, debo usar MediaQuerys*/
+  margin-top: -4.166666666666667vw;
+  display: grid;
+  place-items: center;
+
+  border-radius: 1.6666666666666667vw;
+  padding: 1.6666666666666667vw;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2.6px;
+}
+
+.pasionMusica,
+.NuestrosCursos {
+  font-size: clamp(23px, 2.7vw, 53px);
+}
+.texto_pasion,
+.texto-Seccion-Cursos {
+  font-size: clamp(16px, 1.5vw, 30px);
+}
+
+.boton {
+  background-color: #ffe79b;
+  padding: 0.36rem;
+  cursor: pointer;
+  color: #68079c;
+  border-radius: 0.308rem;
+  width: auto;
+  margin-top: 5px;
+  font-size: clamp(15px, 1.041vw, 25px);
+}
+/***********************/
+
+/*******Exclamacion**solo de aqui*/
+.exclamacion {
+  margin-top: 5px;
+  font-size: clamp(18px, 1.7vw, 33px);
+  font-family: "Times New Roman", Times, serif;
+}
+/****************/
+
+/**Estilos footer*/
+footer {
+  width: 100%;
+
+  background-color: #40128b;
+  opacity: 1;
+
+  color: #ffffff;
+}
+.li-foter {
+  margin: 15px;
+  display: inline-block;
+  list-style: none;
+}
+.icon {
+  width: clamp(20px, 1.6vw, 40px);
+}
+.redes {
+  display: inline;
+  background-color: #eac8a5;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: auto;
+}
+
+.footer-p {
+  font-size: clamp(10px, 1vw, 12px);
+  margin: 1.0416vw;
+  display: inline-block;
+}
+@media (min-height: 100vw) {
+  hr {
+    width: 100%;
+  }
+}

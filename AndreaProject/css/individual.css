@@ -1,0 +1,219 @@
+.periodico {
+  display: grid;
+
+  grid-auto-flow: dense;
+  grid-auto-rows: 70vh;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  padding: 5px;
+
+  margin: 30px auto 300px auto;
+}
+
+/*Generales this*/
+.columna1 {
+  position: relative;
+  border-right: solid 1px #40128b;
+}
+
+.columna1,
+.columna2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+.arriba {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.abajo {
+  width: 100%;
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  flex-grow: 1;
+}
+
+/*Columna 1: Foto curso*/
+.imgPading {
+  position: relative;
+
+  height: 80%;
+  width: 60%;
+
+  border-radius: 10px;
+  outline: solid 3px #9336b4;
+
+  padding-left: 5px;
+  padding-right: 5px;
+
+  padding-top: 5px;
+  padding-bottom: 30px;
+}
+.img {
+  background-image: url(../img/clase_guitarra.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+
+  border-radius: 10px;
+}
+.nomCurso {
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  transform: translate(-50%);
+
+  padding: 5px;
+  border-radius: 10px;
+  border: solid 3px #9336b4;
+
+  font-family: "Katibeh", cursive;
+  font-size: clamp(1rem, 1.5rem, 2rem);
+
+  background-color: #f2f1f1;
+  color: #9336b4;
+}
+
+/*Generales parte de abajo*/
+.principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: 1;
+}
+
+.item {
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+
+  background-color: #f2f1f1;
+}
+
+.item ul li {
+  text-align: justify;
+}
+
+.negocio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 5px auto auto auto;
+  padding: 10px;
+  outline: solid 1px #40128b;
+  height: 80%;
+  width: 70%;
+  border-radius: 10px;
+
+  background-color: #f2f1f1;
+}
+.precioCarro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 80%;
+}
+.cupos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 60%;
+  height: 100px;
+
+  border-radius: 10px;
+
+  background-color: #d20962;
+  color: white;
+}
+.addCesta {
+  border-radius: 10px;
+
+  width: 100%;
+  flex-wrap: 1;
+
+  background-color: #ffc845;
+  color: #080202;
+}
+.inscribirse {
+  border-radius: 10px;
+
+  width: 60%;
+
+  flex-wrap: 1;
+
+  background-color: #7ac143;
+  color: #060606;
+}
+
+/*Maraña en precios*/
+.descuento {
+  position: relative;
+
+  border-radius: 5px;
+  padding: 3px 15px;
+  margin-bottom: 3px;
+
+  background-color: #d9d9d9;
+  color: #9d9595;
+}
+
+.descuento::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 100%;
+  left: 0;
+  border-bottom: 1px solid black;
+  transform: rotate(-10deg);
+}
+.precioHoy,
+.hoy {
+  color: #8800b8;
+}
+.precioHoy {
+  padding-left: 10px;
+}
+.hoy {
+  margin-left: 70px;
+}
+
+.Carro {
+  width: clamp(50px, 60px, 60px);
+  height: clamp(50px, 60px, 60px);
+  margin: auto 10px;
+  background-image: url(../img/shopping-cart.png);
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 777px) {
+  .columna1 {
+    padding-bottom: 15px;
+    border: 0px solid black;
+    border-bottom-width: 1px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-height: 655px) {
+  .nomCurso {
+    display: none;
+  }
+  .imgPading {
+    padding: 5px;
+  }
+}

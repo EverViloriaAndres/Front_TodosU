@@ -1,0 +1,127 @@
+.para-galeria {
+  /*Se crea esta sub-section para poder hacer que la galeria no quede de 1columna*/
+  /*Debido a que la section padre, es display gris y place-item:center*/
+
+  min-width: 100%;
+
+  padding: 3px;
+  margin: 1.4% auto;
+
+  border-radius: 17px;
+}
+
+.galeria {
+  display: grid;
+  gap: 0.2604166666666667vw;
+  grid-auto-flow: dense;
+  grid-auto-rows: 19.833333333333332vw;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  /*La linea anterios nos da galeria responsive sin mediaquerys*/
+}
+
+.targ {
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  position: relative;
+  border-radius: 0.8vw;
+  background-position: center;
+  background-size: cover;
+}
+
+/*Necesito estilos diferentes para dispositivos con y sin cursor*/
+@media (hover: hover) {
+  /*******Estilos con cursor******/
+  .desCurso {
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 50%;
+    border-radius: 0 0 0.8vw 0.8vw;
+    background-color: #f3bcc8;
+    font-weight: bold;
+  }
+  .pDeCursos {
+    margin-bottom: 15px;
+    font-size: 0rem;
+    color: white;
+  }
+  .btnCurso {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 45%;
+    margin: 10px auto;
+    font-size: clamp(10px, 1.041vw, 20px);
+  }
+  /*************/
+
+  /*.targ:hover {
+  }*/
+
+  .targ:hover > .desCurso {
+    width: 100%;
+  }
+  .targ:hover > .desCurso > .pDeCursos {
+    font-size: 2rem;
+  }
+  .targ:hover > .desCurso > .btnCurso {
+    display: block;
+    cursor: pointer;
+  }
+
+  /*1/2 Querys*/
+  @media (max-width: 780px) {
+    .pDeCursos {
+      display: none;
+    }
+  }
+}
+/*Y si no hay cursor*/
+@media (hover: none) {
+  /*******Estilos con cursor******/
+  .btnCurso {
+    position: absolute;
+    bottom: 0;
+    right: 45%;
+    margin: 10px auto;
+    font-size: clamp(10px, 1.041vw, 20px);
+    cursor: pointer;
+  }
+  .pDeCursos {
+    display: none;
+  }
+}
+
+#targ-1 {
+  background-image: url(../img/clase_piano.jpg);
+}
+#targ-2 {
+  background-image: url(../img/clase_guitarra.jpg);
+}
+#targ-3 {
+  background-image: url(../img/clase_sarxo.jpg);
+}
+#targ-4 {
+  background-image: url(../img/clase_arpa.jpg);
+}
+#targ-5 {
+  background-image: url(../img/clase_bongos.jpg);
+}
+#targ-6 {
+  background-image: url(../img/clase_violin.jpg);
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: clamp(20px, 40px, 50px);
+  height: clamp(20px, 40px, 50px);
+
+  background-image: url(../img/mas.svg);
+  background-position: center;
+  background-size: cover;
+}

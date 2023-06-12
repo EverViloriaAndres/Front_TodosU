@@ -1,0 +1,176 @@
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  margin: 50px auto 300px;
+  padding: 10px;
+}
+
+#left-column {
+  flex: 1;
+  flex-direction: column;
+}
+
+#right-column {
+  padding: 10px;
+  flex: 0 0 25%;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;
+  }
+
+  #right-column {
+    order: 2;
+    width: 100%;
+  }
+}
+.logo {
+  width: clamp(230px, 15vw, 15vw);
+  height: 200px;
+  margin: 40px auto;
+
+  border-radius: 10px;
+  outline: solid 2px #ff620a;
+
+  background-image: url(../img/LogoPEqueño.png);
+  background-position: center;
+  background-size: cover;
+}
+.resumen_precios {
+  width: 80%;
+  margin: 20px auto;
+
+  border-radius: 10px;
+  outline: solid 3px #8800b8;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
+  background-color: #f2f1f1;
+}
+.totales {
+  width: 60%;
+  text-align: left;
+}
+.lineas {
+  color: black;
+}
+.pagar {
+  width: 70%;
+  margin: 20px auto;
+
+  padding: 5px;
+  border-radius: 10px;
+
+  background-color: #ff620a;
+  color: #f0f0f0;
+}
+
+/*Izquierda*/
+.titulo,
+.cantidad {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  border-radius: 10px;
+  outline: solid 2px #8800b8;
+
+  margin-bottom: 10px;
+  padding: 10px;
+
+  background-color: #f2f1f1;
+}
+@media (max-width: 640px) {
+  #precio {
+    right: 0;
+    padding-right: 5px;
+    text-align: right;
+    margin-right: 0;
+  }
+}
+@media (max-width: 440px) {
+  #precio {
+    display: none;
+  }
+}
+.item figure {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 5px;
+}
+.item figure img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+.item figure figcaption {
+  margin: auto;
+  font-weight: bold;
+}
+#precio {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: #8800b8;
+}
+
+@media (hover: hover) {
+  #userName {
+    position: fixed;
+    top: 12%;
+    right: 3%;
+
+    padding: 0.2604166666666667vw;
+    border-radius: 0.2rem;
+
+    font-size: clamp(1.25rem, 1.5625vw, 2.188rem);
+    text-transform: uppercase;
+
+    outline: solid 2px #d1a410;
+    background-color: #f2edf7;
+    color: #40128b;
+
+    opacity: 0.1;
+    transition: 0.3s linear;
+  }
+  #userName:hover {
+    opacity: 1;
+  }
+}
+@media (hover: none) {
+  #userName {
+    position: fixed;
+    top: 10%;
+    right: 1%;
+
+    padding: 0.2604166666666667vw;
+    border-radius: 0.2rem;
+
+    font-size: clamp(1.25rem, 1.5625vw, 2.188rem);
+    text-transform: uppercase;
+
+    outline: solid 2px #d1a410;
+    background-color: #f2edf7;
+    color: #40128b;
+
+    opacity: 1;
+    transform: rotate(360deg);
+
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transition: 0.3s linear;
+  }
+}
